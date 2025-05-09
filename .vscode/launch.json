@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        // Backend (Node.js) Debugging
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Backend",
+            "program": "${workspaceFolder}/server/index.js", // Adjust the path to your backend entry point
+            "cwd": "${workspaceFolder}/server",
+            "outFiles": ["${workspaceFolder}/server/**/*.js"],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "console": "integratedTerminal", // Use the integrated terminal for logs
+            "skipFiles": ["<node_internals>/**"] // Skip Node.js internal files during debugging
+        },
+        
+    ]
+}
